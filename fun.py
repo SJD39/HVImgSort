@@ -1,11 +1,9 @@
 import os
 import re
 
-imgFormat = (".jpg", ".png", ".jpeg")
-
-
-def getImgPath(folder, subdir=True):
+def getImgPath(folder, subdir = True):
     imgPaths = []
+    imgFormat = (".jpg", ".png", ".jpeg")
 
     for filePath, dirnames, fileNames in os.walk(folder):
         for fileName in fileNames:
@@ -15,3 +13,5 @@ def getImgPath(folder, subdir=True):
                 imgPaths.append(filePath + "\\" + fileName)
 
     return imgPaths
+
+
